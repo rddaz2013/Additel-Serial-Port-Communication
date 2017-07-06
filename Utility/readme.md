@@ -31,7 +31,7 @@ import Utility.Additel from Additel
 
 # AdditelUnit
 
-[Additel.getUnits()](#additel) returns an array of these.
+[Additel.getUnits()](#additelgetunits) returns an array of these.
 
 ### Properties:
 
