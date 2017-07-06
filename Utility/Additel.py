@@ -38,22 +38,31 @@ class testPort(threading.Thread):
         text = text[text.find(":"):]
 
         # Additel 220 Unit
-        if (text == ":F:OTEST:OK\0"):
+        if (text == ":F:OMODEL:Additel 220\0"):
             return Additel.ADT220
 
-         #Additel 22X Unit
-        elif (text == ":E:Error:1006\0"):
-            return Additel.ADT22X
+        # Additel 221A Unit
+        elif (text == ":F:OMODEL:Additel 221A\0"):
+            return Additel.ADT221A
 
-        # Additel 672 or 681 Unit
-        elif (text == ":E:OTEST:1\0"):
-            if (stopbits == serial.STOPBITS_TWO):
-                return Additel.ADT672
-            else:
-                return Additel.ADT681
+        # Additel 222A Unit
+        elif (text == ":F:OMODEL:Additel 222A\0"):
+            return Additel.ADT222A
+
+        # Additel 223A Unit
+        elif (text == ":F:OMODEL:Additel 223A\0"):
+            return Additel.ADT223A
+
+        # Additel 672 Unit
+        elif (text == ":E:OMODEL:1018\0"):
+            return Additel.ADT672
+
+        # Additel 681 Unit
+        elif (text == ":E:OMODEL:1019\0"):
+            return Additel.ADT681
 
         # Additel 761 Unit
-        elif (text == ":F:OTEST:1\0"):
+        elif (text == ":E:OMODEL:1003\0"):
             return Additel.ADT761
 
         # None of the Above
@@ -80,7 +89,7 @@ class testPort(threading.Thread):
                     # because we will pull for possible output multiple times
                     try:
                         open_port = serial.Serial(self.port, baudrate, databits, serial.PARITY_NONE, stopbits, 0.01)
-                        open_port.write("255:R:OTEST:1\r\n")
+                        open_port.write("255:R:OMODEL:1\r\n")
 
                         # we will pull for data 10 times
                         # (10 * 0.01 seconds each = 0.1 seconds total waiting time)
@@ -90,10 +99,11 @@ class testPort(threading.Thread):
                             #if there is any data
                             if (len(output) != 0):
 
-                                # read 12 more characters so we can make a decision on the unit type
-                                open_port.timeout = 0.05
-                                output += open_port.read(size=12)
-                                open_port.timeout = 0.01
+                                # read all of the characters so we can make a decision on the unit type
+                                more_output = " "
+                                while (more_output != ""):
+                                    more_output = open_port.read(size=1)
+                                    output += more_output
 
                                 #decide the unit type
                                 unit_type = self.__parse_unit_type(output, stopbits)
@@ -125,7 +135,9 @@ class Additel:
 
     # create some constants to use with AdditelUnit objects
     ADT220 = "ADT220"
-    ADT22X = "ADT22X"
+    ADT221A = "ADT221A"
+    ADT222A = "ADT222A"
+    ADT223A = "ADT223A"
     ADT672 = "ADT672"
     ADT681 = "ADT681"
     ADT761 = "ADT761"
