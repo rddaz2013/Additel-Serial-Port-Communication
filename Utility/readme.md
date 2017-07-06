@@ -4,20 +4,21 @@ A list of Utility Classes you can use in your programs.
 
 ---
 
-## Additel.py
+# Additel.py
 
-### Additel
+## Additel
 
 Can be imported by using something like:
 ```python
 import Utility.Additel from Additel
 ```
-Functions:
-| Method | Returns |
-| --- | ---|
-| getUnits() "Gets a list of serial settings for Additel Units.  Will ignore any serial ports currently in use." | AdditelUnit [] |
 
-Constants:
+#### Additel.getUnits()
+
+| Static Function | returns AdditelUnit [] | Gets a list of serial settings for Additel Units.  Will ignore any serial ports currently in use. |
+
+#### Constants
+
 | Name | Value |
 | --- | ---|
 | Additel.ADT220 | "ADT220" |
@@ -29,11 +30,12 @@ Constants:
 | Additel.ADT761 | "ADT761" |
 | Additel.UNKNOWN_UNIT | "UNKNOWN_UNIT" |
 
-### AdditelUnit
+## AdditelUnit
 
-Usually gotten by calling [Additel.getUnits()](#additel)
+[Additel.getUnits()](#additel) returns an array of these.
 
 Properties:
+
 | Name | Type / Value | Description |
 | --- | --- | --- |
 | port | String | The port address the unit is communicating from (In Windows it is COM1, COM2, etc.  In Mac or Linux it is /dev/tty.________). |
