@@ -26,9 +26,9 @@ None so far.  But we'll be adding a few soon.
 
 ## Utility Classes
 
-Currently we have one utility class which should help you with finding and identifying the Additel gauges.  You can find documentation on it in the Utility folder
+Currently we have just one utility class.  It should help you with finding and identifying your Additel units.  You can find documentation on it in the Utility folder.
 
-### [Additel](/Utility)
+### [Additel.py](/Utility#Additel.py)
 
 ---
 
