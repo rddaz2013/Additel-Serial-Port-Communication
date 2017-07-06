@@ -31,7 +31,7 @@ Constants:
 
 ### AdditelUnit
 
-Usually gotten by calling [Additel.getUnits()](#Additel)
+Usually gotten by calling [Additel.getUnits()](#additel)
 
 Properties:
 | Name | Type / Value | Description |
