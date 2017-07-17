@@ -19,6 +19,8 @@ import Utility.Additel from Additel
 
 ## [Constants](#constants)
 
+*These are some helpful constants that were put in to represent the units.  You may also use the strings listed below instead of the constants.*
+
 | Name | Value |
 | --- | ---|
 | **Additel.ADT220** | "ADT220" |
