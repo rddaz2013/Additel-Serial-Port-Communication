@@ -14,9 +14,8 @@ import Utility.Additel from Additel
 
 *Gets a list of serial settings for Additel Units.  Will ignore any serial ports currently in use.*
 
-Static Function.
-
-returns [AdditelUnit[]](#additelunit)
+| returns [AdditelUnit[]](#additelunit) | Static Function |
+| --- | ---|
 
 ### Constants
 
