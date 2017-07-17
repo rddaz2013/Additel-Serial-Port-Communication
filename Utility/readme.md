@@ -3,18 +3,18 @@
 A list of Utility Classes you can use in your programs.
 
 ---
-# Additel
+# Additel.py
 
 Can be imported by using something like:
 ```python
 import Utility.Additel from Additel
 ```
 
-### Additel.getUnits()
+## [Additel.getUnits()](#additelgetunits)
 
-*Static Function.  Gets a list of serial settings for Additel Units.  Will ignore any serial ports currently in use.*
+*Gets a list of serial settings for Additel Units.  Will ignore any serial ports currently in use.*
 
-**returns AdditelUnit []**
+*Static Function.*  *returns [AdditelUnit[]](#additelunit)*
 
 ### Constants
 
