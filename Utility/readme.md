@@ -30,13 +30,11 @@ import Utility.Additel from Additel
 | **Additel.ADT761** | "ADT761" |
 | **Additel.UNKNOWN_UNIT** | "UNKNOWN_UNIT" |
 
-# AdditelUnit
+# [AdditelUnit](#additelunit)
 
-[Additel.getUnits()](#additelgetunits) returns an array of these.
+*[Additel.getUnits()](#additelgetunits) returns an array of these.*
 
-### Properties:
-
-| Name | Type / Value | Description |
+| Property | Type / Value | Description |
 | --- | --- | --- |
 | **port** | String | The port address.  In Windows, COM1, COM2, etc.  In Mac or Linux, /dev/tty.________. |
 | **baudrate** | *Number* - 2400, 4800, 9600, 19200, 38400, 57600, 115200 | The baud rate frequency. |
