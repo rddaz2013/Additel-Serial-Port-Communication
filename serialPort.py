@@ -9,9 +9,8 @@ port = serial.Serial(   port='COM3',
                         stopbits=serial.STOPBITS_ONE,
                         timeout=1   )
 
-# write the OTEST command to the serial port
-# if you have an ADT761, use "255:R:ODEVSN:1\r\n" instead
-port.write("255:W:ODATE:1\r\n")
+# reads the SN of an ADT761
+port.write("255:R:ODEVSN:1\r\n")
 
 # read the first 500 characters (or less if it has a quicker timeout)
 for x in range(1,100):
