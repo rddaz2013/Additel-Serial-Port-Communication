@@ -14,4 +14,4 @@ port.write("255:R:ODEVSN:1\r\n")
 
 # read the first 500 characters (or less if it has a quicker timeout)
 for x in range(1,100):
-    print port.read(size=500)
+    print(port.read(size=500))
