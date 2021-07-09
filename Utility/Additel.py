@@ -1,4 +1,4 @@
-"
+"A class used to perform typical utility actions with Additel units."
 
 #import serial and the serial enumeration tool
 import serial
