@@ -2,13 +2,15 @@
 
 This respository provides examples and a few utility classes for working with Additel units.
 
+# 2021 Update to Python3 
+
 ---
 
 # Prerequisites
 
 These examples and utilites are written mostly in Python, though you may sees a few written in other orogramming languages.  To get these to compile and run, you will need:
 
-## [Python 2 for Windows](https://www.python.org/downloads/ "Python 2 for Windows")
+## [Python 3 for Windows](https://www.python.org/downloads/ "Python 3 for Windows")
 Our examples use Python 2, though there is a chance that much of it will work with Python 3 as well.  The classes should be easy enough to read through and change, so if you do need to alter them, they shouldn't be too hard to work with.
 
 ## [pySerial](http://pythonhosted.org/pyserial/pyserial.html#installation "pySerial")
@@ -24,13 +26,6 @@ None so far.  But we'll be adding a few soon.
 
 ---
 
-# Utility Classes
-
-Currently we have just one utility class.
-
-## [Additel.py](/Utility#additelpy)
-
----
 
 # Old readme (in process of changing)
 
