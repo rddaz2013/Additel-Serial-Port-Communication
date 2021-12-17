@@ -92,7 +92,7 @@ class testPort(threading.Thread):
 
                         # we will pull for data 10 times
                         # (10 * 0.01 seconds each = 0.1 seconds total waiting time)
-                        for x in range(0,10):
+                        for _ in range(10):
                             output = open_port.read(size=1)
 
                             #if there is any data
@@ -118,12 +118,10 @@ class testPort(threading.Thread):
                                 #close the port and quit the function (exiting the thread too)
                                 open_port.close()
                                 return
-                        
+
                         # if we weren't able to find anything, close the port
                         open_port.close()
 
-                    # For catching when the paramaters of serial.open are out of range
-                    # But this should never happen
                     except ValueError:
                         pass
 
